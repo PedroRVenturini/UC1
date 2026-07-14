@@ -31,6 +31,7 @@ while True:
     print('2 - Listar todos os alunos')
     print('3 - Ver estatisticas da academia')
     print('4 - Sair')
+
     opcao = int(input('Escolha uma opcao: '))
 
     if opcao == 1:
@@ -38,21 +39,21 @@ while True:
         idade = int(input('Idade: '))
         peso = float(input("Peso: "))
         altura = float(input("Altura: "))
-        classificacao = imc
+        
 
         imc = peso / (altura ** 2)
 
         if imc < 18.5:
-            print('Abaixo do peso')
+            classificacao = 'Abaixo do peso'
 
         elif imc <= 24.9:
-            print('Peso normal') 
+            classificacao = 'Peso normal'
 
         elif imc <= 29.9:
-            print('Sobrepeso')
+            classificacao = 'Sobrepeso'
 
         else:
-            print('Obesidade')
+            classificacao = 'Obesidade'
 
         aluno = {
             'nome' : nome,
